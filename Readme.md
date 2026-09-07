@@ -4,44 +4,25 @@ A clean, responsive news aggregator web application that fetches real-time artic
 
 ---
 
-## 🖥️ Live Preview & Running the Project
+## 🖥️ How to Run the Project
 
-> [!IMPORTANT]
-> **A local server is REQUIRED.**  
-> NewsAPI's Developer plan strictly blocks browser requests from `file:///` protocol (returning `HTTP 426 corsNotAllowed`). The application **must** be served from `http://localhost`.
+The app now supports **both** direct browser execution and local development server mode:
 
-### 🚀 Quick Start
+### Option 1: Direct File Opening (No Setup Required)
+- Simply double-click `index.html` to open it in your browser (`file:///` protocol).
+- If NewsAPI blocks direct browser calls (due to its free Developer tier policy), the app **automatically and seamlessly switches to the open news mirror**, displaying all news articles and category feeds without any blank screen.
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Swarajbabu/News-Aggregator.Project.git
-   cd News-Aggregator.Project
-   ```
+### Option 2: 1-Click Server (Windows)
+- Double-click **`start.bat`** in the project folder.
+- It will automatically launch the local server at `http://localhost:3000` and open it directly in your default browser for live NewsAPI queries.
 
-2. **Add your NewsAPI key:**
-   - Sign up for a free key at [https://newsapi.org/register](https://newsapi.org/register).
-   - In `script.js`, ensure your API key is set at the top:
-     ```javascript
-     const API_KEY = "YOUR_API_KEY_HERE";
-     ```
-
-3. **Start a local development server:**
-
-   **Using Python (Recommended):**
-   ```bash
-   python -m http.server 3000
-   ```
-
-   **Using Node.js:**
-   ```bash
-   npx serve .
-   ```
-
-   **Using VS Code:**
-   Right-click `index.html` and select **"Open with Live Server"**.
-
-4. **Open in your browser:**  
-   Navigate to [http://localhost:3000](http://localhost:3000) (or the port displayed by your server).
+### Option 3: Manual Terminal Server
+```bash
+python -m http.server 3000
+# or
+npx serve .
+```
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
